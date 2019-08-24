@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Contacts List
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar type="text" (ionInput)="searchText($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-group *ngFor="let c of contactResultSubscriber | async">
+      <ion-item-divider>
+        <ion-label>{{ c.name.familyName }} {{ c.name.givenName }}</ion-label>
+      </ion-item-divider>
+
+      <ion-item>
+        <ion-label>{{ c.phoneNumbers[0].value }}</ion-label>
+      </ion-item>
+      
+    </ion-item-group>
+  </ion-list>
+</ion-content>

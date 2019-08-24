@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Create New Contacts
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <form [formGroup]="createContacts">
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input formControlName="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input formControlName="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contat Number</ion-label>
+      <ion-input formControlName="contactNumber"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="add()">Add Contact</ion-button>
+  </form>
+</ion-content>
